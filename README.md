@@ -5,6 +5,7 @@
 - A simple Unix shell that supports jobs control.
 - The shell works through three main task: (1): **parse** the command to extract the executable name and the command-line options. (2): **execute** the command by creating a child process then run it. (3): **reap** the processes after terminating.
 - It's the 5th lab of [15-213: Introduction to Computer Systems](https://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15213-f15/www/index.html).
+- You can read the specifications with this [writeup](https://github.com/Zaher1307/tiny-shell/blob/main/shlab.pdf).
 
 ## How to use it?
 First use the following commands to run the shell:
