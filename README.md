@@ -25,7 +25,8 @@ The shell can be used to run any other command by typing the absolute path of it
 ***note:*** tiny-shell doesn't support *pagers*.
 
 ## How to test it?
-- `tests` contain trace files provided with lab-handouts.
+- `traces` contain trace files provided with lab-handouts.
+- `tests` contain executable files used in the test provided with lab-handouts.
 - Run each trace on tshref and tsh then compare the outputs.
 
 For example, you can run trace `trace14` on tsh by using the following command:
