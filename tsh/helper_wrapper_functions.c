@@ -110,12 +110,5 @@ handler_t *Signal(int signum, handler_t *handler) {
     return (old_action.sa_handler);
 }
 
-/*
- * sigquit_handler - The driver program can gracefully terminate the
- *    child shell by sending it a SIGQUIT signal.
- */
-void sigquit_handler(int sig) {
-    printf("Terminating after receipt of SIGQUIT signal\n");
-    exit(1);
-}
+
 

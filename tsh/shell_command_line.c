@@ -71,7 +71,7 @@ void eval(char *cmdline) {
  */
 int builtin_cmd(char **argv) {
     if (!strcmp(argv[0], "quit")) {
-        exit(0);
+        abort();
     } else if (!strcmp(argv[0], "jobs")) {
         listjobs(jobs);
         return 1;

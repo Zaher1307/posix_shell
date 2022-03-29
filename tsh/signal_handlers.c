@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <errno.h>
 #include <signal.h>
 #include <sys/wait.h>
@@ -79,6 +80,21 @@ void sigtstp_handler(int sig) {
     sigprocmask(SIG_SETMASK, &prev_mask, NULL);
 
     errno = prev_errno;   
+}
+
+ /*
+ * sigquit_handler - The driver program can gracefully terminate the
+ *    child shell by sending it a SIGQUIT signal.
+ */
+void sigquit_handler(int sig)
+{
+    sigset_t mask_all, prev_mask;
+
+    sigfillset(&mask_all);
+    sigprocmask(SIG_SETMASK, &mask_all, &prev_mask);
+    printf("Terminating after receipt of SIGQUIT signal\n");
+    sigprocmask(SIG_SETMASK, &prev_mask, NULL);
+    abort();
 }
 
 /*********************
